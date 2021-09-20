@@ -1,0 +1,19 @@
+<div ngClass="hero-detail">
+    <H2>{{hero?.name}} details!</H2>
+            
+    <div *ngIf="hero">
+        <div ngClass="detail-row">
+            <span ngClass="first-column">id:</span>
+            {{hero.id}}
+        </div>
+        <div ngClass="detail-row">
+            <span ngClass="first-column">name:</span>
+            <input matInput [(ngModel)]="hero.name"/>
+        </div>
+    </div>
+
+    <div ngClass="buttons">
+        <button mat-raised-button color="primary" (click)="onBackClick()">Back</button>
+        <button mat-raised-button color="accent" (click)="onSaveClick()">Save</button>
+    </div>
+</div>

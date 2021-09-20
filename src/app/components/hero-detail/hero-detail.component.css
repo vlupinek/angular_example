@@ -1,0 +1,15 @@
+
+.hero-detail .detail-row {
+    display: flex;
+}
+
+.hero-detail .first-column {
+    width: 100px;
+}
+
+.hero-detail .buttons {
+    margin-top: 10px;
+}
+.hero-detail .buttons button {
+    margin-right: 10px;
+}

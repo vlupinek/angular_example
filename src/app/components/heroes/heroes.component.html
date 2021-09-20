@@ -1,0 +1,32 @@
+<div ngClass="heroes">
+    <H2>My Heroes</H2>
+
+    <span ngClass="first-column">Hero name: </span>
+    <input matInput [(ngModel)]="newHeroName"/>
+    <button ngClass="add-hero" mat-raised-button color="accent" (click)="onAddHeroClick()" [disabled]="!!!newHeroName">Add hero</button>
+
+
+    <mat-action-list dense>
+        <mat-list-item  *ngFor="let hero of (heroes | async)" (click)="onHeroSelected(hero)">
+          <div ngClass="hero-id">
+              {{hero.id}}
+          </div>
+          
+          {{hero.name}}
+          
+          <button mat-icon-button (click)="onDeleteHero($event, hero)">
+            <mat-icon>delete</mat-icon>
+          </button>
+      
+        </mat-list-item>
+  </mat-action-list>
+
+  <div *ngIf="selectedHero">
+    <h2>
+      <span ngClass="hero-upper-name">{{selectedHero.name}}</span> is my hero
+    </h2>
+
+    <button mat-raised-button color="accent" (click)="onViewDetailsClick()">View details</button>
+  </div>
+
+</div>

@@ -1,0 +1,6 @@
+<div ngClass="top-heroes">
+    <H2>Top Heroes</H2>
+    <mat-button-toggle *ngFor="let hero of (heroes | async | slice: 0 : 4)" (click)="navigateOnHero(hero.id)">
+        {{hero.name}}
+    </mat-button-toggle>
+</div>

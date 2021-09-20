@@ -1,0 +1,24 @@
+.mat-list .mat-list-item .hero-id {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 28px;
+  height: 32px;
+  background-color: #673ab7;
+  color: white;
+
+  margin-right: 12px;
+}
+
+.mat-list .mat-list-item  {
+  padding-bottom: 2px;
+}
+
+.hero-upper-name {
+  text-transform: uppercase;
+}
+
+.add-hero {
+  margin-left: 10px;
+}

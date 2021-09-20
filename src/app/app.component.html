@@ -1,0 +1,6 @@
+<h1>Tour of Heroes</h1>
+<nav ngClass="link-row">
+  <a mat-raised-button routerLink="/dashboard" [color]="router.url === '/dashboard' ? 'primary' : ''">Dashboard</a>
+  <a mat-raised-button routerLink="/heroes" [color]="router.url === '/heroes' ? 'primary' : ''">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
